@@ -190,12 +190,13 @@ window.onload = function() {
     changePlayerTurn: function () {
       if(this.playerTurn == 1) {
         this.playerTurn = 2;
-        $('.turn').css({"background-image":"url('http://i63.tinypic.com/2r2xb0z.jpg')", "width":'50%%', "float":'left'});
+        $('.turn').css({"background-image":"url('http://i64.tinypic.com/2hoy49x.jpg')","margin-top": '12px',"margin-left": '20px', "background-repeat": 'no-repeat', "width":'50%', "float":'right'});
         return;
       }
       if(this.playerTurn == 2) {
         this.playerTurn = 1;
-        $('.turn').css({"background-image":"url('http://i66.tinypic.com/28l8mc1.png')", "width":'50%', "float":'right'});
+        $('.turn').css({"background-image":"url('http://i64.tinypic.com/2hoy49x.jpg')","margin-top": '12px',"background-repeat": 'no-repeat', "margin-left": '20px', "width":'100%', "float": 'left'});
+
       }
     },
     //reset the game
