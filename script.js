@@ -256,7 +256,7 @@ window.onload = function() {
           if(!piece.canJumpAny()) {
             piece.move(tile);
           } else {
-            alert("You must jump when possible!");
+            alert("Hint: You can jump your oppent if you use this tile.");
           }
         }
       }
