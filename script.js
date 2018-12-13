@@ -106,16 +106,19 @@ window.onload = function() {
       var pieceToRemove = this.canOpponentJump(tile.position);
       //if there is a piece to be removed, remove it
       if(pieceToRemove) {
+
         pieces[pieceIndex].remove();
         return true;
       }
       return false;
     };
-
+    this.toggle = function () {
+      this.element
+    }
     this.remove = function () {
       //remove it and delete it from the gameboard
       this.element.css("display", "none");
-      if(this.player == 1) $('#player2').append("<div class='capturedPiece'></div>");
+      if(this.player == 1) $('#player2').append("<div class='capturedPieces'></div>");
       if(this.player == 2) $('#player1').append("<div class='capturedPiece'></div>");
       Board.board[this.position[0]][this.position[1]] = 0;
       //reset position so it doesn't get picked up by the for loop in the canOpponentJump method
@@ -212,6 +215,7 @@ window.onload = function() {
   Events
   ***/
 
+
   //select the piece on click if it is the player's turn
   $('.piece').on("click", function () {
     var selected;
@@ -256,7 +260,7 @@ window.onload = function() {
           if(!piece.canJumpAny()) {
             piece.move(tile);
           } else {
-            alert("Hint: You can jump your oppent if you use this tile.");
+            alert("Hint: You can jump your oppen if you use this tile.");
           }
         }
       }
