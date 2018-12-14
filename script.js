@@ -106,18 +106,18 @@ window.onload = function() {
       var pieceToRemove = this.canOpponentJump(tile.position);
       //if there is a piece to be removed, remove it
       if(pieceToRemove) {
-
         pieces[pieceIndex].remove();
         return true;
       }
       return false;
     };
     this.toggle = function () {
-      this.element
+      this.element.hide("slow");
     }
     this.remove = function () {
+      this.element.animate({height: 'toggle'});
       //remove it and delete it from the gameboard
-      this.element.css("display", "none");
+      //this.element.css("display", "none");
       if(this.player == 1) $('#player2').append("<div class='capturedPieces'></div>");
       if(this.player == 2) $('#player1').append("<div class='capturedPiece'></div>");
       Board.board[this.position[0]][this.position[1]] = 0;

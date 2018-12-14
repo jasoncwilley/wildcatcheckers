@@ -7,24 +7,24 @@ html, body {
   margin: 0;
   padding: 0;
   color: #333333;
-  font-family: font72602;
+  font-family: 'Kavoon', cursive;
   font-size: 16px;
   background-color: #0033A0; }
   html h2, body h2 {
-    font-family: font72602;
+    font-family: 'Kavoon', cursive;
     font-size: 1.3em; }
   html h3, body h3 {
-    font-family: font72602;
+    font-family: 'Kavoon', cursive;
     font-size: 1.1em; }
   html a, body a {
-    font-family: font72602;
+    font-family: 'Ewert', cursive;
     text-decoration: none;
     color: #333333;
     font-weight: 700; }
     html a:hover, body a:hover {
       text-decoration: underline; }
   html hr, body hr {
-    font-family: font72602;
+    font-family: 'Ewert', cursive;
     border: 0;
     height: 1px;
     background-color: #F1F1F1;
@@ -33,7 +33,7 @@ html, body {
     clear: both; }
 
 div.column {
-  font-family: font72602;
+  font-family: 'Kavoon', cursive;
   position: relative;
   float: left;
   overflow: auto;
@@ -45,13 +45,13 @@ div.column {
   max-height: 768px;) {
   div.leftcolumn {
     float:left;
-    font-family: font72602;
+    font-family: 'Kavoon', cursive;
     width: 30% !important;
     overflow: hidden;
     height: auto; } }
 div.info, div.stats {
   float: left;
-  font-family: font72602;
+  font-family: 'Kavoon', cursive;
   width: 25%;
   box-sizing: border-box;
   padding: 5px 5px;
@@ -123,10 +123,14 @@ div.stats {
       width: 100%;
     }
   div.stats button#cleargame {
+    width: 200px;
+    font-family: 'Kavoon', cursive;
     font-size: 20px;
     display: block;
     border: 0;
-    color: #F1F1FF;
+    border-width: 5px;
+    border-color:#F1F1F1;
+    color: #F1F1F1;
     border-radius: 50%;
     cursor: pointer;
     margin: 20px auto 10px;
@@ -137,6 +141,8 @@ div.stats {
     div.stats button#cleargame:hover {
      background-color:  #F1F1F1;
      color: #0033a0;
+     border-width: 5px;
+     border-color: #0033a0;
      box-shadow: 1px 1px 3px #0033a0;}
 
 div#board {
