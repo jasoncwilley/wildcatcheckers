@@ -115,29 +115,45 @@
       return false;
     };
 
+
     this.remove = function () {
-<<<<<<< HEAD
-      var winner1 = $('#player1').children().length;
-      var winner2 = $('#player2').children().length;
+
+      var winner2 = $('div.gracecaptured').length;
+      var winner1 = $('div.wyattcaptured').length;
+
       this.element.animate({left: 1300});
 
-=======
-      this.element.animate({left: 1300});
->>>>>>> 9e006b3cf0a96597e707343ba77c9e93f553b5b9
+      var playwinner = new Audio('ta-da.mp3');
+      var endGame = function () {
+
+      if(winner1==12){
+        playwinner.play();
+        alert('Looks Like Another Win For Wyatt!!!');
+
+      }
+      else if(winner2==11){
+        playwinner.play();
+        alert('Chalk Up Another Win For Grace');
+
+      }
+    };
       //remove it and delete it from the gameboard
       //this.element.css("display", "none");
-      if(this.player == 1) $('#player2').append("<div class='capturedPieces'></div>");
+      if(this.player == 1) $('#player2').append("<div class='capturedPiece'><div class='wyattcaptured'></div>");
       console.log(winner2);
-      if(winner2==3) alert('winner2');
-      if(this.player == 2) $('#player1').append("<div class='capturedPiece'></div>");
+      if(winner2==11){endGame()};
+      if(this.player == 2) $('#player1').append("<div class='capturedPiece'><div class='gracecaptured'></div>");
       console.log(winner1);
-      if(winner1==3) alert('The winner');
+      if(winner1==12){endGame()};
 
       Board.board[this.position[0]][this.position[1]] = 0;
       //reset position so it doesn't get picked up by the for loop in the canOpponentJump method
       this.position = [];
       }
+
+
     }
+
 
 
 

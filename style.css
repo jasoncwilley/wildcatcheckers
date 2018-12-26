@@ -101,7 +101,7 @@ div.stats {
     padding: 0 15px 20px;
     border-top-right-radius: 3px;
     color: #0033a0; }
-    div.stats #player2 .capturedPieces {
+    div.stats #player2 .capturedPiece {
       width: 3vmin;
       height: 3vmin;
       background-color: #0033a0;
