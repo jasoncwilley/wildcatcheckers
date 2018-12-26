@@ -1,4 +1,4 @@
-window.onload = function() {
+ window.onload = function() {
   //The initial setup
   var gameBoard = [
     [  0,  1,  0,  1,  0,  1,  0,  1 ],
@@ -10,6 +10,7 @@ window.onload = function() {
     [  0,  2,  0,  2,  0,  2,  0,  2 ],
     [  2,  0,  2,  0,  2,  0,  2,  0 ]
   ];
+
   //arrays to store the instances
   var pieces = [];
   var tiles = [];
@@ -18,6 +19,8 @@ window.onload = function() {
   var dist = function (x1, y1, x2, y2) {
     return Math.sqrt(Math.pow((x1-x2),2)+Math.pow((y1-y2),2));
   }
+
+
   //Piece object - there are 24 instances of them in a checkers game
   function Piece (element, position) {
     //linked DOM element
@@ -111,20 +114,29 @@ window.onload = function() {
       }
       return false;
     };
-    this.toggle = function () {
-      this.element.hide("slow");
-    }
+
     this.remove = function () {
-      this.element.animate({height: 'toggle'});
+      var winner1 = $('#player1').children().length;
+      var winner2 = $('#player2').children().length;
+      this.element.animate({left: 1300});
+
       //remove it and delete it from the gameboard
       //this.element.css("display", "none");
       if(this.player == 1) $('#player2').append("<div class='capturedPieces'></div>");
+      console.log(winner2);
+      if(winner2==3) alert('winner2');
       if(this.player == 2) $('#player1').append("<div class='capturedPiece'></div>");
+      console.log(winner1);
+      if(winner1==3) alert('The winner');
+
       Board.board[this.position[0]][this.position[1]] = 0;
       //reset position so it doesn't get picked up by the for loop in the canOpponentJump method
       this.position = [];
+      }
     }
-  }
+
+
+
 
   function Tile (element, position) {
     //linked DOM element
@@ -266,5 +278,9 @@ window.onload = function() {
       }
     }
   });
+
+
+  ///    function() {      alert(($(this).find('.capturedPiece')).length);
+
 
 }
