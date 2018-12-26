@@ -116,10 +116,14 @@
     };
 
     this.remove = function () {
+<<<<<<< HEAD
       var winner1 = $('#player1').children().length;
       var winner2 = $('#player2').children().length;
       this.element.animate({left: 1300});
 
+=======
+      this.element.animate({left: 1300});
+>>>>>>> 9e006b3cf0a96597e707343ba77c9e93f553b5b9
       //remove it and delete it from the gameboard
       //this.element.css("display", "none");
       if(this.player == 1) $('#player2').append("<div class='capturedPieces'></div>");
