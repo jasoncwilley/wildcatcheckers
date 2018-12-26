@@ -111,11 +111,9 @@ window.onload = function() {
       }
       return false;
     };
-    this.toggle = function () {
-      this.element.hide("slow");
-    }
+
     this.remove = function () {
-      this.element.animate({height: 'toggle'});
+      this.element.animate({left: 1300});
       //remove it and delete it from the gameboard
       //this.element.css("display", "none");
       if(this.player == 1) $('#player2').append("<div class='capturedPieces'></div>");
