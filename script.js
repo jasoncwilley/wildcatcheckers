@@ -128,12 +128,12 @@
 
       if(winner1==12){
         playwinner.play();
-        alert('Looks Like Another Win For Wyatt!!!');
+        alert('Looks Like Another Win For Grace!!!');
 
       }
-      else if(winner2==11){
+      else if(winner2==12){
         playwinner.play();
-        alert('Chalk Up Another Win For Grace');
+        alert('Chalk Up Another Win For Wyatt');
 
       }
     };
