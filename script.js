@@ -126,12 +126,12 @@
       var playwinner = new Audio('ta-da.mp3');
       var endGame = function () {
 
-      if(winner1==12){
+      if(winner1==11){
         playwinner.play();
         alert('Looks Like Another Win For Grace!!!');
 
       }
-      else if(winner2==12){
+      else if(winner2==11){
         playwinner.play();
         alert('Chalk Up Another Win For Wyatt');
 
