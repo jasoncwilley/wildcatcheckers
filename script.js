@@ -1,4 +1,4 @@
- window.onload = function() {
+window.onload = function() {
   //The initial setup
   var gameBoard = [
     [  0,  1,  0,  1,  0,  1,  0,  1 ],
@@ -37,9 +37,12 @@
     //makes object a king
     this.king = false;
     this.makeKing = function () {
-      this.element.css("backgroundImage", "url('king"+this.player+".png')");
+      var playwinner = new Audio('ta-da.mp3');
+      this.element.css("backgroundImage", "url('king"+this.player+".png')")
+      playwinner.play();
       this.king = true;
     }
+
     //moves the piece
     this.move = function (tile) {
       this.element.removeClass('selected');
