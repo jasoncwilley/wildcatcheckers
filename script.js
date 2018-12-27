@@ -36,8 +36,9 @@ window.onload = function() {
       this.player = 2;
     //makes object a king
     this.king = false;
+
     this.makeKing = function () {
-      var playwinner = new Audio('ta-da.mp3');
+      var playwinner = new Audio('king.mp3');
       this.element.css("backgroundImage", "url('king"+this.player+".png')")
       playwinner.play();
       this.king = true;
@@ -134,7 +135,7 @@ window.onload = function() {
         alert('Looks Like Another Win For Grace!!!');
 
       }
-      else if(winner2==111){
+      else if(winner2==11){
         playwinner.play();
         alert('Chalk Up Another Win For Wyatt');
 
